@@ -1,6 +1,6 @@
 <template>
    
-   <div class="container" :style="{ backgroundImage: `url(${bg})`}" >
+   <div class="container"  >
 <img :src="logo1" alt="image">
 
 <div class="line" > </div>
@@ -25,9 +25,5 @@ data(){
 
 .line{
    width: 50%;
-}
-.container{
-   min-height: 100vh;
-   width: 100%;
 }
 </style>
