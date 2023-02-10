@@ -4,21 +4,28 @@
     {{ screenWidth }}
     <router-view></router-view>
   </div>
+
+
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import navbarVue from "./components/navbar.vue";
 import homebg from "./assets/starter-code/assets/home/background-home-desktop.jpg";
 import backgrounds from "./components/backgrounds";
 export default {
+
+
   data() {
-    console.log(location);
+    console.log('location');
     return {
       screenWidth: window.innerWidth,
       backScreen: String,
       homebg,
     };
+  },
+  components:{
+    navbarVue
+
   },
   mounted() {
     const homes = backgrounds.home;
@@ -28,6 +35,7 @@ export default {
     const location = window.location.pathname;
 
     const mobile = this.screenWidth <= 768;
+
 
     const setBack = () => {
       switch (location) {
@@ -51,6 +59,7 @@ export default {
     const main = setBack();
     mobile ? (this.backScreen = main.mob) : (this.backScreen = main.desk);
 
+    
     window.onresize = () => {
       const screen = window.innerWidth;
       this.screenWidth = screen;
@@ -61,7 +70,40 @@ export default {
       showMobDesk(mobile);
     };
   },
-};
+
+watch: {
+
+  $route(to) {
+    const homes = backgrounds.home;
+    const crews = backgrounds.crew;
+    const screen = window.innerWidth;
+      this.screenWidth = screen;
+      const mobile = this.screenWidth <= 768;
+
+    const showMobDesk = (a) => {
+      a
+        ? (this.backScreen = setBack().mob)
+        : (this.backScreen = setBack().desk);
+    };
+
+
+    const setBack = () => {
+      switch (to.path) {
+        case "/":
+          return homes;
+          break;
+        case "/crews":
+          return crews;
+          break;
+        default:
+          break;
+      }
+    };
+
+    showMobDesk(mobile)
+  }
+}
+  };
 </script>
 
 <style>
