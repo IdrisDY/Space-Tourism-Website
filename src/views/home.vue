@@ -54,5 +54,32 @@ font-size: 1.7rem;
 letter-spacing: .3rem;
 
 }
+@media(max-width:768px){
+   .home{
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1em;
+   }
+   .s-grid{
+ margin-left: unset;
+ height: 150px;
+   width: 150px;
+}
+
+article :nth-child(2){
+   font-size:4rem
+}
+article :nth-child(1){
+   font-size:.8rem
+}
+article{
+   text-align: center;
+}
+article :nth-child(3){
+   text-align: center;
+   font-size: .8rem;
+}
+
+}
 
 </style>

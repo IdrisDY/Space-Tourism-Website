@@ -1,12 +1,11 @@
 <template>
-   
-   <div class="contain"  >
+   <div class="contain"   >
       <div class="img">
          <img :src="logo1" alt="image">
-
       </div>
+      <div class="links-desk"  >
+         <div class="line" ></div>
 
-<div class="line" ></div>
 
 <div class="links">
 
@@ -30,31 +29,62 @@
 
 </div>
 
+
+      </div>
+
+      <img class="menu" :src="menu" alt="menu" >
    </div>
 
 </template>
 
 <script>
 import logo1 from '../assets/starter-code/assets/shared/logo.svg'
+import menu from '../assets/starter-code/assets/shared/icon-hamburger.svg'
+
 export default {
+   mounted() {
+    
+      console.log('can see nav');
+
+//     window.onresize = () => {
+//       const screen = window.innerWidth;
+//       const truth = screen<= 768;
+//       console.log('can adjust nav',screen);
+// this.truthy = truth
+
+// console.log(this.truthy);
+//     };
+  },
+
 
 data(){
    return{
-      logo1
+      logo1, mobile:window.innerWidth,truthy:false,menu 
    }
-}
+
+},
+beforeDestroy() {
+  window.removeEventListener('resize');
+},
+
+
 }
 </script>
 <style scoped>
 
 .line{
-   width: 40%;
+   width: 35%;
    background: white;
    height: 1px;
    display: flex;
    align-self: center;
    margin-right: -3em;
    opacity: .25;
+}
+.links-desk{
+   display: flex;
+width: 100%;
+justify-content: flex-end;
 }
 .contain{
    display: flex;
@@ -65,21 +95,37 @@ justify-content: space-between;
 .links{
    background: #FFFFFF0A;
    height: 80px;
-width: 50%;
 display: flex;
 justify-content: space-around;
 color: white;
 align-items: center;
 padding: 0 1em;
-backdrop-filter: blur(40.7742px)
+backdrop-filter: blur(40.7742px);
+gap: 1em;
+width: 60%;
 }
 
 .links div a{
    text-decoration: none;
    color: white;
 }
+.menu{
+      display: none;
+   }
+
 .img{
    display: flex;
    align-self: center;
+}
+@media(max-width:768px){
+   .contain{
+      padding-right: 2em;
+   }
+   .links-desk{
+      display: none;
+   }
+   .menu{
+      display: flex;
+   }
 }
 </style>

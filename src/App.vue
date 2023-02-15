@@ -10,7 +10,6 @@
 
 <script>
 import navbarVue from "./components/navbar.vue";
-import homebg from "./assets/starter-code/assets/home/background-home-desktop.jpg";
 import backgrounds from "./components/backgrounds";
 export default {
 
@@ -19,22 +18,22 @@ export default {
     console.log('location');
     return {
       screenWidth: window.innerWidth,
-      backScreen: String,
-      homebg,
+      backScreen: '',
     };
   },
   components:{
     navbarVue
 
   },
-  mounted() {
-    const homes = backgrounds.home;
+  methods:{
+    setPageScreen(){
+      const homes = backgrounds.home;
     const crews = backgrounds.crew;
     const tech = backgrounds.tech;
     const dest = backgrounds.destination;
     const location = window.location.pathname;
 
-    const mobile = this.screenWidth <= 768;
+    const mobile = window.innerWidth <= 768;
 
 
     const setBack = () => {
@@ -56,20 +55,19 @@ export default {
         : (this.backScreen = setBack().desk);
     };
 
-    const main = setBack();
-    mobile ? (this.backScreen = main.mob) : (this.backScreen = main.desk);
-
-    
-    window.onresize = () => {
-      const screen = window.innerWidth;
-      this.screenWidth = screen;
-      const mobile = this.screenWidth <= 768;
-
-      // is this switch same as nested ifs - always have been
-
-      showMobDesk(mobile);
-    };
+    showMobDesk(mobile);
+console.log('still called');
+    }
   },
+
+  mounted() {
+    this.setPageScreen()
+    window.addEventListener('resize', this.setPageScreen);
+  },
+
+  beforeDestroy() {
+  window.removeEventListener('resize', this.setPageScreen);
+},
 
 watch: {
 
