@@ -5,6 +5,7 @@ import navbarvue from '../components/navbar.vue'
 import textvue from '../components/text.vue'
 import Home  from '../views/home.vue'
 import App from '../App.vue'
+import Destination from '../views/destination.vue'
 const routes = [
    {
       path:'/',
@@ -17,7 +18,24 @@ const routes = [
    component:HelloWorld
 
 },
+{
+   path:'/destination',
+   name:'destination',
+   component:Destination
 
+},
+// how to redirect
+{
+   path:'/former -path',
+   redirect:'/destination',
+
+},
+// 404 - create a component for it
+{
+   path:'/:catchAll(.*)',
+   component:'/destination',
+
+}
 
 ]
 

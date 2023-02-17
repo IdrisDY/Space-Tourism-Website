@@ -1,5 +1,5 @@
 <template>
-  <div class="container" :style="{ backgroundImage: `url(${backScreen})` }">
+  <div class="main" :style="{ backgroundImage: `url(${backScreen})` }">
     <navbar-vue />
     {{ screenWidth }}
     <router-view></router-view>
@@ -11,6 +11,7 @@
 <script>
 import navbarVue from "./components/navbar.vue";
 import backgrounds from "./components/backgrounds";
+import destination from './views/destination.vue'
 export default {
 
 
@@ -44,6 +45,9 @@ export default {
         case "/crews":
           return crews;
           break;
+          case "/destination":
+          return dest;
+          break;
         default:
           break;
       }
@@ -74,6 +78,8 @@ watch: {
   $route(to) {
     const homes = backgrounds.home;
     const crews = backgrounds.crew;
+    const tech = backgrounds.tech;
+    const dest = backgrounds.destination;
     const screen = window.innerWidth;
       this.screenWidth = screen;
       const mobile = this.screenWidth <= 768;
@@ -93,6 +99,10 @@ watch: {
         case "/crews":
           return crews;
           break;
+          case "/destination":
+          return dest;
+          break;
+
         default:
           break;
       }
@@ -105,7 +115,7 @@ watch: {
 </script>
 
 <style>
-.container {
+.main {
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
