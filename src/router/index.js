@@ -6,6 +6,7 @@ import textvue from '../components/text.vue'
 import Home  from '../views/home.vue'
 import App from '../App.vue'
 import Destination from '../views/destination.vue'
+import Crews from '../views/crews.vue'
 const routes = [
    {
       path:'/',
@@ -15,7 +16,7 @@ const routes = [
    {
    path:'/crews',
    name:'Crew',
-   component:HelloWorld
+   component:Crews
 
 },
 {
