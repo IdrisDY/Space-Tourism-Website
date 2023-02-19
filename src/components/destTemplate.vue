@@ -23,13 +23,13 @@
 
 <div class="dist-time flex flex-col md:flex-row text-center md:gap-20 gap-5" >
    <div class="low-time flex flex-col" >
-      <span class="text-[#D0D6F9]" >AVG.DISTANCE</span>
+      <span class=" text-left text-[#D0D6F9]" >AVG.DISTANCE</span>
       <span class="text-2xl" >{{ popObject.avgd }}</span>
 
    </div>
    <div class="low-time flex flex-col" >
       <span class="text-[#D0D6F9]" >EST.TRAVEL.TIME</span>
-      <span class="text-2xl" >{{ popObject.travelTime }}</span>
+      <span class=" text-left text-2xl" >{{ popObject.travelTime }}</span>
    </div>
 
 </div>
@@ -94,9 +94,13 @@ button{
    all: unset;
    cursor: pointer;
    color: #D0D6F9;
+   border-bottom: 1px solid transparent;
+   transition: border-color 0.3s ease
+
 }
 button:hover, .btnhover{
-   border-bottom: 1px solid white;
+   border-bottom-color:  white;
+   cursor: pointer;
 }
 
 @media(min-width:990px){

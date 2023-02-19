@@ -27,12 +27,12 @@
    color: white;
    display: grid;
    grid-template-columns: 1fr 1fr;
-   margin-top: 10%;
+   margin-top: 6%;
    padding: 0 10%;
    place-items: center;
 }
 article :nth-child(2){
-   font-size:7rem;
+   font-size:5rem;
    letter-spacing: .8rem;
    margin: 0;
 }
