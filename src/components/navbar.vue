@@ -7,32 +7,34 @@
          <div class="line" ></div>
 
 
-<div class="links">
+         <div class="links">
 
-   <div>
-      <span>00</span>
-      <router-link to="/" > HOME</router-link>
-   </div>
-   <div>
-      <span>01</span>
-      <router-link to="/crews" > CREWS</router-link>
-   </div>
-   <div>
-      <span>02</span>
-      <router-link to="/destination" > DESTINATION</router-link>
-   </div>
-   <div>
-      <span>03</span>
-      <router-link to="/technology" > TECHNOLOGY</router-link>
-   </div>
+<div>
+   <span>00</span>
+   <router-link to="/" > HOME</router-link>
+</div>
+<div>
+   <span>01</span>
+   <router-link to="/crews" > CREWS</router-link>
+</div>
+<div>
+   <span>02</span>
+   <router-link to="/destination" > DESTINATION</router-link>
+</div>
+<div>
+   <span>03</span>
+   <router-link to="/technology" > TECHNOLOGY</router-link>
+</div>
 
 
 </div>
 
 
       </div>
+      <dropdown-vue v-if="menuClick" @btn-close = "closeMenu" ></dropdown-vue>
 
-      <img class="menu" :src="menu" alt="menu" >
+<button @click = "openMenu" >      <img class="menu" :src="menu" alt="menu" >
+</button>
    </div>
 
 </template>
@@ -40,7 +42,7 @@
 <script>
 import logo1 from '../assets/starter-code/assets/shared/logo.svg'
 import menu from '../assets/starter-code/assets/shared/icon-hamburger.svg'
-
+import DropdownVue from './Dropdown.vue'
 export default {
    mounted() {
     
@@ -59,16 +61,27 @@ export default {
 
 data(){
    return{
-      logo1, mobile:window.innerWidth,truthy:false,menu 
+      logo1, mobile:window.innerWidth,truthy:false,menu , menuClick:true
    }
 
 },
 beforeDestroy() {
   window.removeEventListener('resize');
 },
+methods : {
+    closeMenu(){
+      this.menuClick = false
+   },
+   openMenu(){
+      this.menuClick = true
+   }
 
+   }
+,
 
+components:{ DropdownVue}
 }
+
 </script>
 <style scoped>
 
@@ -126,6 +139,11 @@ width: 60%;
    }
    .menu{
       display: flex;
+   }
+}
+@media(min-width:768px) and (max-width:990px) {
+   .line{
+      display: none;
    }
 }
 </style>
