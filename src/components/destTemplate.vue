@@ -1,6 +1,6 @@
 <template>
    <div>
-<div  class="text-center lg:text-left ml-[13%] ">
+<div  class="text-center py-[5%] lg:py-[1%]  lg:text-left ml-[13%] ">
    
    <span> <span class=" text-white text-opacity-75" > 01</span> PICK YOUR DESTINATION</span>
 </div>

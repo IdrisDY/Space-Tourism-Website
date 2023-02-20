@@ -1,10 +1,10 @@
 <template>
       <main
-        class="text-white swiper-slide"
+        class="text-white "
       >
-        <div class="text-center md:text-left md:ml-[5%] lg:text-left">
-          <span>
-            <span class="text-white text-opacity-25"> 02</span> MEET YOUR
+        <div class="text-center md:text-left md:ml-[5%] py-[5%] lg:py-[1%]  lg:ml-[10%] lg:text-left">
+          <span class="" >
+            <span class="text-white  text-opacity-25"> 02</span> MEET YOUR
             CREW</span
           >
         </div>
@@ -12,7 +12,7 @@
           class="flex flex-col-reverse md:flex-col gap-5 lg:gap-16 lg:grid main-content"
         >
           <div
-            class="flex flex-col gap-5 items-center lg:mt-[5%]  relative w-[90%] lg:w-full  lg:gap-2 lg:items-start lg:self-start self-center"
+            class="flex flex-col gap-5 items-center lg:mt-[15%] w-[90%] lg:w-full lg:self-start lg:gap-2 lg:items-start  self-center"
           >
             <span class="text-white text-opacity-50 text-center text-2xl">
               {{ popObject.title.toUpperCase() }}</span
@@ -23,11 +23,11 @@
             >
 
             <p
-              class="text-center md:w-[80%] lg:w-full lg:text-left text-[#D0D6F9]"
+              class="text-center md:w-[80%] lg:mt-[5%] lg:w-full lg:text-left text-[#D0D6F9]"
             >
               {{ popObject.ptxt }}
             </p>
-            <div class="bullets w-full flex gap-4">
+            <div class="bullets justify-center lg:justify-start  w-full order-[-1] md:order-[0] flex gap-4">
       <span class="bullet" @click="setCrew(0)" :class=" popObject.id === 1 ? 'bhover':''"></span>
       <span class="bullet" @click="setCrew(1)" :class=" popObject.id === 2 ? 'bhover':''"></span>
       <span class="bullet" @click="setCrew(2)" :class=" popObject.id === 3 ? 'bhover':''" ></span>
@@ -36,7 +36,8 @@
 
           </div>
           <div class="">
-            <img :src="popObject.moon" :alt="popObject.name" class="w-[50%] m-auto" />
+            <img :src="popObject.moon" :alt="popObject.name" class="w-[55%] h-[40vh] max-w-[250px] md:max-w-full md:h-[80vh] lg:w-[90%] m-auto" />
+            <hr class=" w-[80%] m-auto h-[1px] border-none bg-[#383B4B]" >
           </div>
         </div>
 
@@ -105,15 +106,14 @@ button:hover,
   border-bottom: 1px solid white;
 }
 .bullets{
-   position: fixed;
-   bottom: 10%;
 }
 .bullet{
    width: 10px;
    height: 10px;
    border-radius: 50%;
-   border: 1px solid white;
+   border: 1px solid none;
 display: flex;
+background: grey;
 cursor: pointer;
 }
 .bhover{
@@ -127,9 +127,14 @@ cursor: pointer;
     grid-template-columns: 1fr 1fr;
     margin: 0 5% 0 10%;
   }
+  .bullets{
+   position: fixed;
+   bottom: 10%;
+   order: 1;
+}
+
 
   img {
-    width: 65%;
     margin: auto;
   }
 

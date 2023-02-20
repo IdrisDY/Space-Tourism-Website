@@ -1,7 +1,6 @@
 <template>
   <div class="main" :style="{ backgroundImage: `url(${backScreen})` }">
     <navbar-vue />
-    {{ screenWidth }}
     <router-view></router-view>
   </div>
 
