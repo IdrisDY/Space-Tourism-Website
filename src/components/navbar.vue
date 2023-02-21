@@ -61,7 +61,7 @@ export default {
 
 data(){
    return{
-      logo1, mobile:window.innerWidth,truthy:false,menu , menuClick:true
+      logo1, mobile:window.innerWidth,truthy:false,menu , menuClick:false
    }
 
 },
@@ -70,8 +70,7 @@ beforeDestroy() {
 },
 methods : {
     closeMenu(){
-      this.menuClick = false
-   },
+console.log('moon');   },
    openMenu(){
       this.menuClick = true
    }
