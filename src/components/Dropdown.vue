@@ -1,9 +1,9 @@
 <template>
 <div class="wrapper">
 
-   <div :class="closeClicked ? 'drop close' : 'drop'" >
-      <button @click = "handleClose" >
-         <svg class="" xmlns="http://www.w3.org/2000/svg" width="100" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>      <link-scomp> </link-scomp>
+   <div :class="`drop ${openClicked ? 'appear':'' }` " ref="dropdiv">
+      <button @click = "handleClose" class="flex">
+         <svg class="ml-auto flex self-end items-end  " xmlns="http://www.w3.org/2000/svg" width="21" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>      <link-scomp> </link-scomp>
 
       </button>
 
@@ -35,17 +35,34 @@ import linkScomp from '../components/links.vue'
 export default{
    data(){
       return{
-         closeClicked:false
+         closeClicked:false,
       }
+   },
+   props:{
+openClicked:Boolean
+   },
+   mounted(){
    },
 components:{
    linkScomp
 },
 methods:{
+   //  Emit and in-house functions to interact with animation opening and closing.
    handleClose(){
+   
       this.$emit('btn-close')
-      this.closeClicked = true
+      this.closeClicked = true 
+         this.$refs?.dropdiv.classList?.add('close')
+// handling the close removal class here and adding appear class after checking if openClicked is true.
+      setTimeout(() => {
+         this.$refs?.dropdiv.classList?.remove('close')
+         this.openClicked?
+         this.$refs?.dropdiv.classList?.remove('appear'): null
+
+      }, 700);
+
    }
+
 }
 }
 </script>
@@ -62,11 +79,10 @@ backdrop-filter: blur(40.7742px);
 gap: 2em;
 flex-direction: column;
 top: 0;
-width: 70%;
+width: 71%;
 position: absolute;
 right: 0;
-padding:30% 1em 0 2.5em ;
-animation: appear .7s;
+padding:10% 1em 0 2.5em ;
 height: 100%;
 }
 .wrapper{
@@ -76,8 +92,20 @@ height: 100%;
    top: 0;
    left: 0;
 }
+.appear{
+   animation: appear .7s;
+}
+
 .close{
    animation: close .7s;
+   /* margin: -100% ;
+opacity: 0;
+ visibility: hidden;
+transition:all 1s ease-in ;
+-webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in; */
+
 }
 
 

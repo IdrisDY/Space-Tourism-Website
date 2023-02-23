@@ -47,6 +47,10 @@ export default {
           case "/destination":
           return dest;
           break;
+          case "/technology":
+          return tech;
+          break;
+
         default:
           break;
       }

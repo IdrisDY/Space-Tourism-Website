@@ -7,6 +7,7 @@ import Home  from '../views/home.vue'
 import App from '../App.vue'
 import Destination from '../views/destination.vue'
 import Crews from '../views/crews.vue'
+import Tech from '../views/technology.vue'
 const routes = [
    {
       path:'/',
@@ -25,6 +26,13 @@ const routes = [
    component:Destination
 
 },
+{
+   path:'/technology',
+   name:'Technology',
+   component:Tech
+
+},
+
 // how to redirect
 {
    path:'/former -path',

@@ -31,7 +31,7 @@
 
 
       </div>
-      <dropdown-vue v-if="menuClick" @btn-close = "closeMenu" ></dropdown-vue>
+      <dropdown-vue :openClicked="menuClick" v-if="menuClick" @btn-close = "closeMenu" ></dropdown-vue>
 
 <button @click = "openMenu" >      <img class="menu" :src="menu" alt="menu" >
 </button>
@@ -70,7 +70,12 @@ beforeDestroy() {
 },
 methods : {
     closeMenu(){
-console.log('moon');   },
+console.log('moon'); 
+// giving time for my fade out animation to work
+setTimeout(() => {
+   this.menuClick = false
+}, 700);
+  },
    openMenu(){
       this.menuClick = true
    }

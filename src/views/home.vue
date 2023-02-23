@@ -59,6 +59,8 @@ letter-spacing: .3rem;
       display: flex;
       flex-direction: column;
       padding-bottom: 1em;
+      gap: 3em;
+
    }
    .s-grid{
  margin-left: unset;
