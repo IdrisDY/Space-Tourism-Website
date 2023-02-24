@@ -97,7 +97,6 @@ button:hover,
    border-bottom: 1px solid white;
 }
 
-.bullets {}
 
 .bullet {
    width: 10px;

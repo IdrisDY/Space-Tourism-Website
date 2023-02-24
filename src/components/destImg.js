@@ -6,6 +6,14 @@ import doug from '../assets/starter-code/assets/crew/image-douglas-hurley.webp'
 import mark from '../assets/starter-code/assets/crew/image-mark-shuttleworth.webp'
 import anou from '../assets/starter-code/assets/crew/image-anousheh-ansari.webp'
 import vico from '../assets/starter-code/assets/crew/image-victor-glover.webp'
+import tech1ls from '../assets/starter-code/assets/technology/image-launch-vehicle-landscape.jpg'
+import tech1ps from '../assets/starter-code/assets/technology/image-launch-vehicle-portrait.jpg'
+
+import tech2ls from '../assets/starter-code/assets/technology/image-space-capsule-landscape.jpg'
+import tech2ps from '../assets/starter-code/assets/technology/image-space-capsule-portrait.jpg'
+
+import tech3ls from '../assets/starter-code/assets/technology/image-spaceport-landscape.jpg'
+import tech3ps from '../assets/starter-code/assets/technology/image-spaceport-portrait.jpg'
 
 export const destImg = [
 
@@ -126,3 +134,39 @@ export const crewsData = [
     },
    ]
  
+export const techData = [
+  {
+    id:1,
+    limg:tech1ls,
+    pimg:tech1ps,
+    ptxt:`  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+    payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+    WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+    it's quite an awe-inspiring sight on the launch pad!
+  `,
+name:'LAUNCH VEHICLE'
+  },
+  {
+    id:2,
+    limg:tech2ls,
+    pimg:tech2ps,
+    ptxt:`  A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+    by analogy to the seaport for ships or airport for aircraft. Based in the 
+    famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+    of the Earth’s rotation for launch.
+  `,
+name:'SPACEPORT'
+
+  },
+  {
+    id:3,
+    limg:tech3ls,
+    pimg:tech3ps,
+    ptxt:`  A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+    capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+    you'll spend your time during the flight. It includes a space gym, cinema, 
+    and plenty of other activities to keep you entertained.
+  `,
+name:'SPACE CAPSULE'
+  }
+]
