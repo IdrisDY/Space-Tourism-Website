@@ -4,15 +4,15 @@
 <div class="f-grid" >
 
    <article>
-       <p>SO, YOU WANT TO TRAVEL TO SPACE</p>
-       <p class>SPACE</p>
-       <p>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+       <p class="font-barlowC tracking-widest text-[#D0D6F9]" >SO, YOU WANT TO TRAVEL TO SPACE</p>
+       <p class="font-belle">SPACE</p>
+       <p class="font-barlow" >Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
    </article>
 
 </div> 
 <div class="s-grid" >
 
-<span>EXPLORE</span>
+<span class="font-belle text-[1.2rem] font-bolder ">EXPLORE</span>
 
 </div>
    </main>
@@ -33,7 +33,7 @@
 }
 article :nth-child(2){
    font-size:5rem;
-   letter-spacing: .8rem;
+   letter-spacing: .3rem;
    margin: 0;
 }
 article :nth-child(1){
@@ -50,9 +50,6 @@ article :nth-child(1){
  color: black;
 justify-content:center ;
 align-items: center;
-font-size: 1.7rem;
-letter-spacing: .3rem;
-
 }
 @media(max-width:768px){
    .home{
@@ -72,14 +69,15 @@ article :nth-child(2){
    font-size:4rem
 }
 article :nth-child(1){
-   font-size:.8rem
+   font-size: .9rem
 }
 article{
    text-align: center;
 }
 article :nth-child(3){
    text-align: center;
-   font-size: .8rem;
+   font-size: .95rem;
+   line-height: 25px;
 }
 
 }

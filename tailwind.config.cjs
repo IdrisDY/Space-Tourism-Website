@@ -7,7 +7,14 @@ module.exports = {
 
    ],
   theme: {
-    extend: {},
+    extend: {
+    },
+    fontFamily: {
+      'belle': ['Bellefair','serif'],
+      'barlow': ['Barlow', 'sans-serif'],
+      'barlowC': ['Barlow Condensed', 'sans-serif'],
+     }
+
   },
   plugins: [],
 }

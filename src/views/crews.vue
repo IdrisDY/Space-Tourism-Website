@@ -1,20 +1,20 @@
 <template>
-   <main class="text-white ">
+   <main class="text-white pb-10 ">
       <div class="text-center md:text-left md:ml-[5%] py-[5%] lg:py-[1%]  lg:ml-[10%] lg:text-left">
-         <span class="">
+         <span class="font-barlowC tracking-widest ">
             <span class="text-white  text-opacity-25"> 02</span> MEET YOUR
             CREW</span>
       </div>
       <div class="flex flex-col-reverse md:flex-col gap-5 lg:gap-16 lg:grid main-content">
          <div
-            class="flex flex-col gap-5 items-center lg:mt-[15%] w-[90%] lg:w-full lg:self-start lg:gap-2 lg:items-start  self-center">
-            <span class="text-white text-opacity-50 text-center text-2xl">
+            class="flex flex-col gap-3 items-center lg:mt-[15%] w-[90%] lg:w-full lg:self-start lg:gap-2 lg:items-start  self-center">
+            <span class="text-white text-opacity-50 font-belle text-center text-md">
                {{ popObject.title.toUpperCase() }}</span>
 
-            <span class="text-3xl lg:text-left text-center md:text-4xl">
+            <span class="text-2xl lg:text-left font-belle text-center md:text-4xl">
                {{ popObject.name }}</span>
 
-            <p class="text-center md:w-[80%] lg:mt-[5%] lg:w-full lg:text-left text-[#D0D6F9]">
+            <p class="text-center md:w-[80%] font-barlow lg:mt-[5%] lg:w-full lg:text-left text-[#D0D6F9]">
                {{ popObject.ptxt }}
             </p>
             <div class="bullets justify-center lg:justify-start  w-full order-[-1] md:order-[0] flex gap-4">

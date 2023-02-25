@@ -9,19 +9,19 @@
 
 <div>
    <span>00</span>
-   <router-link to="/" > HOME</router-link>
+   <router-link to="/" @click="handleClose" > HOME</router-link>
 </div>
 <div>
    <span>01</span>
-   <router-link to="/crews" > CREWS</router-link>
+   <router-link to="/crews" @click="handleClose" > CREWS</router-link>
 </div>
 <div>
    <span>02</span>
-   <router-link to="/destination" > DESTINATION</router-link>
+   <router-link to="/destination" @click="handleClose"> DESTINATION</router-link>
 </div>
 <div>
    <span>03</span>
-   <router-link to="/technology" > TECHNOLOGY</router-link>
+   <router-link to="/technology" @click="handleClose"> TECHNOLOGY</router-link>
 </div>
 
 

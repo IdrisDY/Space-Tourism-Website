@@ -1,5 +1,5 @@
 <template>
-<main class="" >
+<main class="pb-10" >
 <dest-template />
 </main>   
 </template>

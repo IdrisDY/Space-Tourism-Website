@@ -155,7 +155,7 @@ name:'LAUNCH VEHICLE'
     famous Cape Canaveral, our spaceport is ideally situated to take advantage 
     of the Earth’s rotation for launch.
   `,
-name:'SPACEPORT'
+name:'SPACE CAPSULE'
 
   },
   {
@@ -167,6 +167,6 @@ name:'SPACEPORT'
     you'll spend your time during the flight. It includes a space gym, cinema, 
     and plenty of other activities to keep you entertained.
   `,
-name:'SPACE CAPSULE'
+name:'SPACEPORT'
   }
 ]

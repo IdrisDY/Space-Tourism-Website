@@ -1,5 +1,5 @@
 <template>
-  <div class="main" :style="{ backgroundImage: `url(${backScreen})` }">
+  <div class="main">
     <navbar-vue />
     <router-view></router-view>
   </div>
@@ -11,6 +11,10 @@
 import navbarVue from "./components/navbar.vue";
 import backgrounds from "./components/backgrounds";
 import destination from './views/destination.vue'
+const doc  = document.body.style
+doc.backgroundRepeat = 'no-repeat'
+doc.backgroundSize = 'cover'
+
 export default {
 
 
@@ -58,12 +62,14 @@ export default {
 
     const showMobDesk = (a) => {
       a
-        ? (this.backScreen = setBack().mob)
-        : (this.backScreen = setBack().desk);
+        ? ( this.backScreen = setBack().mob)
+        : ( this.backScreen = setBack().desk);
     };
 
     showMobDesk(mobile);
 console.log('still called');
+doc.backgroundImage =  `url(${this.backScreen})` ;
+
     }
   },
 
@@ -89,8 +95,8 @@ watch: {
 
     const showMobDesk = (a) => {
       a
-        ? (this.backScreen = setBack().mob)
-        : (this.backScreen = setBack().desk);
+        ? ( this.backScreen = setBack().mob)
+        : ( this.backScreen = setBack().desk);
     };
 
 
@@ -115,6 +121,7 @@ watch: {
     };
 
     showMobDesk(mobile)
+    doc.backgroundImage =  `url(${this.backScreen})`
   }
 }
   };
