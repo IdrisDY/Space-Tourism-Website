@@ -77,6 +77,7 @@ color: white;
 padding: 0 1em;
 backdrop-filter: blur(40.7742px);
 gap: 1.5em;
+-webkit-column-gap: 1.5em;
 flex-direction: column;
 top: 0;
 width: 71%;

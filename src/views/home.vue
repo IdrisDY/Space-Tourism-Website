@@ -56,7 +56,8 @@ align-items: center;
       display: flex;
       flex-direction: column;
       padding-bottom: 1em;
-      gap: 3em;
+     gap: 3em;
+     -webkit-column-gap: 3em;
 
    }
    .s-grid{
