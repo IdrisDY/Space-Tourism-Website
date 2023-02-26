@@ -6,7 +6,7 @@
    <article>
        <p class="font-barlowC tracking-widest text-[#D0D6F9]" >SO, YOU WANT TO TRAVEL TO SPACE</p>
        <p class="font-belle">SPACE</p>
-       <p class="font-barlow" >Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+       <p class="font-barlow text-[#D0D6F9] " >Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
    </article>
 
 </div> 

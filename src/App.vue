@@ -37,8 +37,8 @@ export default {
     const dest = backgrounds.destination;
     const location = window.location.pathname;
 
-    const mobile = window.innerWidth <= 768;
-
+    const mobile = window.innerWidth;
+    this.screenWidth = mobile;
 
     const setBack = () => {
       switch (location) {
@@ -60,14 +60,25 @@ export default {
       }
     };
 
-    const showMobDesk = (a) => {
-      a
-        ? ( this.backScreen = setBack().mob)
-        : ( this.backScreen = setBack().desk);
+
+
+    const showMobDesk = (b) => {
+        switch (true ) {
+          case (b  <= 768) :
+          this.backScreen = setBack().mob
+            break;
+            case (b >= 768 && b < 990 ) :
+           this.backScreen = setBack().tab
+            break;
+            case (b >= 990 ) :
+           this.backScreen = setBack().desk
+            break;
+          default:
+            break;
+        }
     };
 
     showMobDesk(mobile);
-console.log('still called');
 doc.backgroundImage =  `url(${this.backScreen})` ;
 
     }
@@ -91,12 +102,22 @@ watch: {
     const dest = backgrounds.destination;
     const screen = window.innerWidth;
       this.screenWidth = screen;
-      const mobile = this.screenWidth <= 768;
+      const mobile = this.screenWidth;
 
-    const showMobDesk = (a) => {
-      a
-        ? ( this.backScreen = setBack().mob)
-        : ( this.backScreen = setBack().desk);
+      const showMobDesk = (b) => {
+        switch (true) {
+          case (b <= 768) :
+          ( this.backScreen = setBack().mob)
+            break;
+            case (b => 768 && screen < 990 ) :
+          ( this.backScreen = setBack().tab)
+            break;
+            case (b >= 990 ) :
+          ( this.backScreen = setBack().desk)
+            break;
+          default:
+            break;
+        }
     };
 
 

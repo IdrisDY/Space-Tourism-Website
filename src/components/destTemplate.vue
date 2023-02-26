@@ -23,13 +23,14 @@
 
 <div class="dist-time flex flex-col md:flex-row text-center md:gap-20 gap-5" >
    <div class="low-time flex flex-col" >
-      <span class=" text-left font-barlow text-[#D0D6F9]" >AVG.DISTANCE</span>
-      <span class="text-2xl font-belle " >{{ popObject.avgd }}</span>
+      <span class=" text-center lg:text-left font-barlow text-[#D0D6F9]" >AVG.DISTANCE</span>
+      <span class="text-3xl font-belle " >{{ popObject.avgd }}</span>
 
    </div>
    <div class="low-time flex flex-col" >
-      <span class="text-[#D0D6F9] font-barlow " >EST.TRAVEL.TIME</span>
-      <span class=" lg:text-left text-2xl font-belle  " >{{ popObject.travelTime }}</span>
+      <span class="text-[#D0D6F9]  font-barlow " >EST.TRAVEL.TIME</span>
+      <span class=" lg:text-left text-3xl font-belle  " >{{ popObject.travelTime.toUpperCase
+      () }}</span>
    </div>
 
 </div>
