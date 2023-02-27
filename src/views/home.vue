@@ -12,7 +12,7 @@
 </div> 
 <div class="s-grid" >
 
-<span class="font-belle text-[1.2rem] font-bolder ">EXPLORE</span>
+<span class="font-belle text-[1.2rem] tracking-widest font-bolder ">EXPLORE</span>
 
 </div>
    </main>
@@ -27,7 +27,7 @@
    color: white;
    display: grid;
    grid-template-columns: 1fr 1fr;
-   margin-top: 6%;
+   margin-top: 11%;
    padding: 0 10%;
    place-items: center;
 }

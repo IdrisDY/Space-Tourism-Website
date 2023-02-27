@@ -2,26 +2,26 @@
 <div class="wrapper">
 
    <div :class="`drop font-barlowC ${openClicked ? 'appear':'' }` " ref="dropdiv">
-      <button @click = "handleClose" class="flex self-end ">
+      <button @click = "handleClose" class="flex self-end pr-5 ">
          <svg class="ml-auto flex self-end items-end  " xmlns="http://www.w3.org/2000/svg" width="21" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>      <link-scomp> </link-scomp>
 
       </button>
 
-<div  >
+<div class="w-full inline-flex gap-2"  >
    <span class="font-[700]" >00</span>
-   <router-link to="/" @click="handleClose" class="font-[400] tracking-widest" > HOME</router-link>
+   <router-link to="/" @click="handleClose" class="font-[400] tracking-widest w-full  hover:border-r-2 border-white " > HOME</router-link>
 </div>
-<div>
+<div class="w-full inline-flex gap-2" >
    <span>01</span>
-   <router-link to="/crews" @click="handleClose" class="font-[400] tracking-widest" > CREWS</router-link>
+   <router-link to="/crews" @click="handleClose" class="font-[400] tracking-widest w-full hover:border-r-2 border-white" > CREWS</router-link>
 </div>
-<div>
+<div class="w-full inline-flex gap-2" >
    <span>02</span>
-   <router-link to="/destination" @click="handleClose" class="font-[400] tracking-widest" > DESTINATION</router-link>
+   <router-link to="/destination" @click="handleClose" class="font-[400] tracking-widest w-full hover:border-r-2 border-white" > DESTINATION</router-link>
 </div>
-<div>
+<div class="w-full inline-flex gap-2" >
    <span>03</span>
-   <router-link to="/technology" @click="handleClose" class="font-[400] tracking-widest"> TECHNOLOGY</router-link>
+   <router-link to="/technology" @click="handleClose" class="font-[400] tracking-widest w-full hover:border-r-2 border-white"> TECHNOLOGY</router-link>
 </div>
 
 
@@ -83,7 +83,7 @@ top: 0;
 width: 71%;
 position: absolute;
 right: 0;
-padding:10% 1em 0 2.5em ;
+padding:10% 0em 0 2.5em ;
 height: 100%;
 }
 .wrapper{

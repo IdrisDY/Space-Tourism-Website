@@ -4,7 +4,7 @@
       <span class="my-3 font-barlowC gap-2 tracking-widest justify-center lg:justify-start flex lg:ml-[15%] "> <span class="opacity-25" > 03 </span> SPACE LAUNCH 101</span>
       <div class="main-content" >
          <div class="f-grid flex flex-col lg:pt-[10%] lg:ml-[23%] lg:gap-5  lg:flex-row " >
-<div class="numbers flex lg:flex-col gap-5 lg:justify-start justify-center  mt-6 ">
+<div class="numbers font-belle flex lg:flex-col gap-5 lg:justify-start justify-center  mt-6 ">
 
    <button @click="setCrew(0)" :class=" `num rounded-[50%] w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]  text-center border-white focus:bg-white focus:text-black border-[1px] ${checkFocus(1)} `"> 1</button>
    <button @click="setCrew(1)" :class=" `num rounded-[50%] w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]  text-center border-white focus:bg-white focus:text-black border-[1px] ${checkFocus(2)}`"> 2</button>
@@ -15,7 +15,7 @@
    <article class="flex flex-col gap-1 lg:gap-4 mt-4" >
        <p class="font-barlow">THE TERMINOLOGY ...</p>
        <p class=" text-2xl font-belle lg:text-4xl" >{{ compObj.name }}  </p>
-       <p class="text-[1rem] font-barlow pt-2 lg:text-left text-[#D0D6F9] m-auto lg:margin-0  text-center max-w-[90%]" >{{ compObj.ptxt }}  </p>
+       <p class="text-[1rem] font-barlow pt-2 lg:text-left text-[#D0D6F9] m-auto lg:m-0  text-center max-w-[90%]" >{{ compObj.ptxt }}  </p>
    </article>
 
 </div> 

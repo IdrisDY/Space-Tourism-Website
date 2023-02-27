@@ -1,29 +1,29 @@
 <template>
    <div class="contain"   >
       <div class="img">
-         <img :src="logo1" alt="image">
+         <img :src="logo1" class="w-4/5 md:w-full " alt="image">
       </div>
       <div class="links-desk"  >
          <div class="line" ></div>
 
 
-         <div class="links">
+         <div class="links font-barlowC tracking-widest ">
 
-<div>
+<div class="h-full flex gap-2 items-center " >
    <span>00</span>
-   <router-link to="/" > HOME</router-link>
+   <router-link to="/" class="hover:border-b-2 h-full flex items-center  border-white" > HOME</router-link>
 </div>
-<div>
+<div class="h-full flex gap-2 items-center " >
    <span>01</span>
-   <router-link to="/crews" > CREWS</router-link>
+   <router-link to="/crews" class="hover:border-b-2 border-white h-full flex items-center  " > CREWS</router-link>
 </div>
-<div>
+<div class="h-full flex gap-2 items-center " >
    <span>02</span>
-   <router-link to="/destination" > DESTINATION</router-link>
+   <router-link to="/destination" class="hover:border-b-2 border-white h-full flex items-center  " > DESTINATION</router-link>
 </div>
-<div>
+<div class="h-full flex gap-2 items-center " >
    <span>03</span>
-   <router-link to="/technology" > TECHNOLOGY</router-link>
+   <router-link to="/technology" class="hover:border-b-2 border-white h-full flex items-center  " > TECHNOLOGY</router-link>
 </div>
 
 
@@ -95,8 +95,10 @@ components:{ DropdownVue}
    height: 1px;
    display: flex;
    align-self: center;
-   margin-right: -3em;
+   margin-right: -1.5em;
    opacity: .25;
+   z-index: 99999;
+
 }
 .links-desk{
    display: flex;

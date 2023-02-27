@@ -27,7 +27,7 @@
          </div>
          <div class="">
             <img :src="popObject.moon" :alt="popObject.name"
-               class="w-[55%] h-[40vh] max-w-[250px] md:max-w-full md:h-[80vh] lg:w-[90%] m-auto" />
+               class=" h-[40vh] max-w-[250px] md:max-w-full md:h-[80vh] lg:w-[90%] m-auto" />
             <hr class=" w-[80%] m-auto h-[1px] border-none bg-[#383B4B]">
          </div>
       </div>
