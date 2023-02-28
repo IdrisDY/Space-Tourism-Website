@@ -9,19 +9,19 @@
 
 <div class="w-full inline-flex gap-2"  >
    <span class="font-[700]" >00</span>
-   <router-link to="/" @click="handleClose" class="font-[400] tracking-widest w-full  hover:border-r-2 border-white " > HOME</router-link>
+   <router-link to="/" @click="handleClose" :class="` font-[400] ${path === '/' ? 'border-r-2':''} hover:border-r-2 border-white tracking-widest w-full  hover:border-r-2 border-white` " > HOME</router-link>
 </div>
 <div class="w-full inline-flex gap-2" >
    <span>01</span>
-   <router-link to="/crews" @click="handleClose" class="font-[400] tracking-widest w-full hover:border-r-2 border-white" > CREWS</router-link>
+   <router-link to="/crews" @click="handleClose" :class="` font-[400] ${path === '/crews' ? 'border-r-2':''} hover:border-r-2 border-white tracking-widest w-full  hover:border-r-2 border-white` " > CREWS</router-link>
 </div>
 <div class="w-full inline-flex gap-2" >
    <span>02</span>
-   <router-link to="/destination" @click="handleClose" class="font-[400] tracking-widest w-full hover:border-r-2 border-white" > DESTINATION</router-link>
+   <router-link to="/destination" @click="handleClose" :class="` font-[400] ${path === '/destination' ? 'border-r-2':''} hover:border-r-2 border-white tracking-widest w-full  hover:border-r-2 border-white` " > DESTINATION</router-link>
 </div>
 <div class="w-full inline-flex gap-2" >
    <span>03</span>
-   <router-link to="/technology" @click="handleClose" class="font-[400] tracking-widest w-full hover:border-r-2 border-white"> TECHNOLOGY</router-link>
+   <router-link to="/technology" @click="handleClose" :class="` font-[400] ${path === '/technology' ? 'border-r-2':''} hover:border-r-2 border-white tracking-widest w-full  hover:border-r-2 border-white` "> TECHNOLOGY</router-link>
 </div>
 
 
@@ -35,7 +35,7 @@ import linkScomp from '../components/links.vue'
 export default{
    data(){
       return{
-         closeClicked:false,
+         closeClicked:false, path:String
       }
    },
    props:{
@@ -63,7 +63,16 @@ methods:{
 
    }
 
+},
+watch:{
+$route(to){
+   this.path = to.path
+   console.log(this.path);
+
+
 }
+},
+
 }
 </script>
 

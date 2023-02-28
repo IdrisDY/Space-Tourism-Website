@@ -1,9 +1,9 @@
 <template>
-   <div class="pb-10" > 
+   <div class="pb-10 lg:pb-0" > 
    <main class="text-white pt-2 lg:text-left w-full text-center">
-      <span class="my-3 font-barlowC gap-2 tracking-widest justify-center lg:justify-start flex lg:ml-[15%] "> <span class="opacity-25" > 03 </span> SPACE LAUNCH 101</span>
+      <span class="my-3 font-barlowC gap-2 tracking-widest justify-center md:text-[1.3rem] lg:justify-start flex lg:ml-[15%] "> <span class="opacity-25" > 03 </span> SPACE LAUNCH 101</span>
       <div class="main-content" >
-         <div class="f-grid flex flex-col lg:pt-[10%] lg:ml-[23%] lg:gap-5  lg:flex-row " >
+         <div class="f-grid flex flex-col lg:pt-[10%] lg:ml-[19%] lg:gap-5  lg:flex-row " >
 <div class="numbers font-belle flex lg:flex-col gap-5 lg:justify-start justify-center  mt-6 ">
 
    <button @click="setCrew(0)" :class=" `num rounded-[50%] w-[40px] h-[40px] lg:w-[60px] lg:h-[60px]  text-center border-white focus:bg-white focus:text-black border-[1px] ${checkFocus(1)} `"> 1</button>
@@ -85,13 +85,12 @@ img{
 @keyframes appear{
    0%{
 opacity: 0;
-transform: translateX(-100%);
+transform: translateX(-70%);
    }
    100%{
       opacity: 1;
       transform: translateX(0%);
    }
-
 }
 .main-content{
    color: white;

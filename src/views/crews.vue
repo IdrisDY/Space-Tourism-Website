@@ -1,7 +1,7 @@
 <template>
-   <main class="text-white pb-10 ">
-      <div class="text-center md:text-left md:ml-[5%] py-[5%] lg:py-[1%]  lg:ml-[10%] lg:text-left">
-         <span class="font-barlowC tracking-widest ">
+   <main class="text-white pb-10 lg:pb-0 ">
+      <div class="text-center md:text-left md:ml-[5%] py-[5%] lg:py-[1%]  lg:ml-[12%] lg:text-left">
+         <span class="font-barlowC md:text-[1.3rem] tracking-widest ">
             <span class="text-white  text-opacity-25"> 02</span> MEET YOUR
             CREW</span>
       </div>
@@ -27,8 +27,8 @@
          </div>
          <div class="">
             <img :src="popObject.moon" :alt="popObject.name"
-               class=" h-[40vh] max-w-[250px] md:max-w-full md:h-[80vh] lg:w-[90%] m-auto" />
-            <hr class=" w-[80%] m-auto h-[1px] border-none bg-[#383B4B]">
+               class=" h-[40vh] max-w-[250px] md:max-w-full md:h-[74vh]  lg:w-4/5 m-auto" />
+            <hr class=" w-[80%] m-auto h-[1px] md:hidden border-none bg-[#383B4B]">
          </div>
       </div>
 
@@ -118,7 +118,7 @@ button:hover,
    .main-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin: 0 5% 0 10%;
+      margin: 0 5% 0 12%;
    }
 
    .bullets {

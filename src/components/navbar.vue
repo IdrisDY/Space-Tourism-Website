@@ -7,23 +7,23 @@
          <div class="line" ></div>
 
 
-         <div class="links font-barlowC tracking-widest ">
+         <div class="links font-barlowC tracking-widest text-[1.2rem] ">
 
-<div class="h-full flex gap-2 items-center " >
-   <span>00</span>
-   <router-link to="/" class="hover:border-b-2 h-full flex items-center  border-white" > HOME</router-link>
+<div class="h-full flex gap-2 items-center  " >
+   <span  class="font-[900]" >00</span>
+   <router-link to="/" :class="` ${path === '/' ? 'border-b-2':''} transition-colors hover:border-b-2 h-full flex items-center  border-white`" > HOME</router-link>
 </div>
 <div class="h-full flex gap-2 items-center " >
    <span>01</span>
-   <router-link to="/crews" class="hover:border-b-2 border-white h-full flex items-center  " > CREWS</router-link>
+   <router-link to="/crews" :class="` ${path === '/crews' ? 'border-b-2':''} hover:border-b-2 h-full flex items-center border-white`" > CREWS</router-link>
 </div>
 <div class="h-full flex gap-2 items-center " >
    <span>02</span>
-   <router-link to="/destination" class="hover:border-b-2 border-white h-full flex items-center  " > DESTINATION</router-link>
+   <router-link to="/destination" :class="` ${path === '/destination' ? 'border-b-2':''} hover:border-b-2 h-full flex items-center border-white`" > DESTINATION</router-link>
 </div>
 <div class="h-full flex gap-2 items-center " >
    <span>03</span>
-   <router-link to="/technology" class="hover:border-b-2 border-white h-full flex items-center  " > TECHNOLOGY</router-link>
+   <router-link to="/technology" :class="` ${path === '/technology' ? 'border-b-2':''} hover:border-b-2 h-full flex items-center border-white`" > TECHNOLOGY</router-link>
 </div>
 
 
@@ -61,7 +61,7 @@ export default {
 
 data(){
    return{
-      logo1, mobile:window.innerWidth,truthy:false,menu , menuClick:false
+      logo1, mobile:window.innerWidth,truthy:false,menu , menuClick:false, path:String
    }
 
 },
@@ -82,7 +82,14 @@ setTimeout(() => {
 
    }
 ,
+watch:{
+$route(to){
+   this.path = to.path
+   console.log(this.path);
 
+
+}
+},
 components:{ DropdownVue}
 }
 
@@ -120,7 +127,6 @@ color: white;
 align-items: center;
 padding: 0 1em;
 backdrop-filter: blur(40.7742px);
-gap: 1em;
 width: 60%;
 }
 
