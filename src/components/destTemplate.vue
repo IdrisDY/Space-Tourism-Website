@@ -6,7 +6,7 @@
 </div>
    <div class=" flex flex-col gap-5 lg:gap-16 lg:grid main-content ">
       <div class="pt-[10%]" >
-   <img :src="popObject.moon" :alt="popObject.bgtxt" class="w-[50%] m-auto"  >
+   <img :src="popObject.moon" :alt="popObject.bgtxt" :class=" `${rotate} w-[50%] m-auto`"  >
 </div>
 <div class="flex flex-col lg:gap-6 gap-5 items-center w-[90%]  lg:items-start self-center " >
    <div class="btns flex gap-5 md:w-[50%] font-barlowC tracking-widest justify-between md " >
@@ -52,7 +52,7 @@ export default {
    props:['image','showMars','showEuropa','showTitan']
    ,  data(){
    return{
-      popObject:Object, destImg
+      popObject:Object, destImg,rotate:String
    }
   },
   methods:{
@@ -60,9 +60,11 @@ export default {
       console.log('MoonClicked',val);
       this.popObject = destImg[val]    
       console.log(this.popObject);
+      this.rotate = `rotate${val +1}`
    },
    btnClass(b){
    return this.popObject.id === b ? 'btnhover' : '';
+
 }
 
   },
@@ -71,7 +73,7 @@ export default {
   },
   created(){
    this.popObject = destImg[0]    
-
+ this.rotate = 'rotate1'
    const storedData = localStorage.getItem('moonObj');
     if (storedData) {
       this.popObject = JSON.parse(storedData);
@@ -103,6 +105,33 @@ button:hover, .btnhover{
    border-bottom-color:  white;
    cursor: pointer;
 }
+.rotate1{
+   animation: spin 4s linear infinite;
+}
+.rotate2{
+   animation: spin 6s linear infinite;
+}
+
+.rotate3{
+   animation: spin 10s linear infinite;
+}
+
+.rotate4{
+   animation: spin 2s linear infinite;
+}
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 
 @media(min-width:990px){
    .main-content{
